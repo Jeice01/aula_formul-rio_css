@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>O que é um Formulário?</h1>
+    <ul>
+        <li>Forms tem o papael de receber dados do usuário e enviar para um servidor;</li>
+        <li>Podemos validar dados;</li>
+        <li>Tags mais utilizadas são: <strong>form, label e input;</strong></li>
+        <li>A tag form cria o formulário e o delimita;</li>
+        <li>Label descreve os inputs</li>
+        <li>Os inputs é a tag que inserims dados, temos vários tipos: <strong>number, email, text e entre outros.</strong></li>
+    </ul>
+    <h2>Para criar um formulário em html</h2>
+    <ul>
+        <li>Para criar um formulário vamos precisar da tag form, que encapsula todos os elementos do formulário;</li>
+        <li>Dentro da tag form, temos labels e inputs, mas podemos usar outras tag como divs;</li>
+        <li>A tag input tem um atributo chamado <strong>type</strong>, que é onde definimos o propósito do input;</li>
+        <li>Ex.: o input do tipo "text", recebe dados do tipo texto.</li>
+    </ul>
+    <h2>Vamos praticar!!!</h2>
+    <!-- 1 - Criando o formulário -->
+    <!-- 2 - Atributos da tag form -->
+        <!-- action: ação o arquivo ou pasta que os dados serão enviados -->
+        <!-- method: GET ou POST, receber dado ou enviar dado para o servidor -->
+    <form action="" method="">
+        <!-- <label>Nome:</label>
+        <input type="text"> -->
+        <div>
+            <label>Nome:</label>
+            <input type="text"> 
+        </div>
+        <!-- 3 - atributo do input: type -->
+        <!-- name: O valor ligado ao propósito do input e a sua categoria -->
+        <div>
+            <label>Idade:</label>
+            <input type="text" name="age">
+        </div>
+        <!-- 4 - atributo da label -->
+        <!-- for: utilizado para linkar com o input deve ser o mesmo que o atributo name do label, propósitos semânticos que ajuda no rankeamento do google. -->
+        <div>
+            <label for="age">Idade:</label>
+            <input type="text" name="age">
+        </div>
+
+        <!-- 16 - Data -->
+        <div>
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" name="data-nascimento">
+        </div>
+
+        <!-- 19 - email -->
+        <div>
+            <label for="email">Digite o seu e-mail:</label>
+            <input type="email" name="email">
+        </div>
+
+        <!-- 18 - Number -->
+        <div>
+            <label for="salario">Quanto você ganaha no seu emprego atual?</label>
+            <input type="number" name="salario">
+        </div>
+
+        <!-- 12 - Senha -->
+        <div>
+            <label for="senha">Digite a senha:</label>
+            <input type="password">
+        </div>
+
+        <!-- 9 - Textarea -->
+        <div>
+            <label for="comment">Deixe um comentário</label>
+            <textarea name="comment" cols="20" rows="10"></textarea>
+        </div>
+
+        <!-- 17 - Eviar arquivo -->
+        <div>
+            <label for="enviar-arquivo">Insira a sua imagem:</label>
+            <input type="file" name="enviar-arquivo">
+        </div>
+
+        <!-- 22 - Placeholder -->
+        <div>
+            <label for="empregoAtual">Preencha o campo:</label>
+            <input type="text" placeholder="Digite o seu emprego atual..." name="empregoAtual">
+        </div>
+
+        <!-- Value -->
+        <div>
+            <label for="valor">Digite algum valor</label>
+            <input type="text" value="O meu valor é este" name="valor">
+        </div>
+
+        <!-- 21 disable -->
+        <div>
+            <label for="valor">Tente mudar o valor:</label>
+            <input type="text" value="O meu valor é este" name="valor" disabled>
+        </div>
+
+        <!-- Required -->
+        <!-- força o preenchimento de algum campo -->
+        <div>
+            <label for="nascimento">Ano nascimento:</label>
+            <input type="number" placeholder="Digite o ano que você nasceu..." required>
+        </div>
+
+        
+        <!-- 6 - Select
+        <div>
+            <label for="job">Selecione a sua profissão</label>
+            <select name="job">
+                <option value="programador(a)">Programador(a)</option>
+                <option value="tester">Tester/QA</option>
+                <option value="Programador(a)">Advogado(a)</option>
+                <option value="devops">DevOps</option>
+            </select>
+        </div> -->
+        <!-- 7 - opção selected -->
+        <!-- <div>
+            <label for="contract">Você leu o contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim, eu li contrato.</option>
+                <option value="nao" selected>Não, eu não li o contrato.</option>
+            </select>
+        </div> -->
+        <!-- 8 - Multiplças opções -->
+        <!-- <div>
+            <label for="items">Selecione os itens desejados:</label>
+            <select name="items" multiple>
+                <option value="maca">Maçã</option>
+                <option value="arroz">Arroz</option>
+                <option value="feijão">Feijão</option>
+                <option value="ovos">Ovos</option>
+            </select>
+        </div> -->
+        <!-- 10 fieldset e legend -->
+        <!-- fieldset: tag para agrupar inputs -->
+        <!-- legend: é como uma label que desceve os inputs agrupados -->
+        <!-- <div>
+           <fieldset>
+            <legend>Preencha as suas informações</legend>
+            <label for="firstname">Nome:</label>
+            <input type="text" name="firstname">
+            <label for="lastname">Sobrenome:</label>
+            <input type="text" name="lastname">
+           </fieldset> 
+        </div> -->
+        <!-- 11 - datalist -->
+        <!-- <div>
+            <label for="sabor">Escolha o sabor do sorvete:</label>
+            <input type="text" list="sabor" name="sabor">
+            <datalist id="sabor">
+                <option value="Cereja"></option>
+                <option value="Morango"></option>
+                <option value="Abacaxi"></option>
+                <option value="Chocolate"></option>
+            </datalist>
+        </div> -->
+        <!-- 14 - radio -->
+        <!-- escolhe uma opção -->
+        <!-- <div>
+            <label for="car_model">Escolha o modelo do seu carro:</label>
+            <div class="radio">
+               <input type="radio" value="bmw" name="car_model">
+               <label for="bmw">BMW</label> 
+            </div>
+            <div class="radio">
+                <input type="radio" value="ferrari" name="car_model">
+                <label for="ferrari">Ferrari</label> 
+             </div>
+             <div class="radio">
+                <input type="radio" value="volvo" name="car_model">
+                <label for="volvo">Volvo</label> 
+             </div>
+        </div> -->
+        <!-- 15 - checkbox -->
+        <!-- escolhe várias opções -->
+        <!-- <div>
+           <label for="optional">Opcionais do carro:</label>
+           <div class="checkbox">
+                <input type="checkbox" name="optional[]" value="pneus">
+                <label for="pneus">Pneus Grandes</label>
+           </div>
+           <div class="checkbox">
+                <input type="checkbox" name="optional[]" value="banco">
+                <label for="banco">Banco de couro</label>
+           </div>
+           <div class="checkbox">
+                <input type="checkbox" name="optional[]" value="ar">
+                <label for="ar">Ar condicionado</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="optional[]" value="alarme">
+                <label for="alarme">Alarme</label>
+            </div>
+        </div> --> 
+ 
+        <!-- 13 - limpar o formulário -->
+        <!-- Resetar o formulário -->
+        <input type="reset" value="Limpar">
+
+        <!-- 5 - Enviar os dados do formulário -->
+        <!-- Podemos enviar os dados do form para o servidor através de um botão de submit -->
+        <input type="submit" value="Enviar">
+
+        <h3>Temos outras tags como os select(options), checkbox, radio, datalist, fieldset(legend) e entre outras.</h3>
+    </form>
+    
+  
+
+</body>
+</html>
